@@ -8,9 +8,10 @@
 
 namespace app\admin\controller;
 
-class Admin
+class Index
 {
-    public function Admin() {
+    public function index() {
         return '后台页面';
     }
 }
+?>
