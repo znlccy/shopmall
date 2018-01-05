@@ -12,11 +12,19 @@ use think\Db;
 
 class User
 {
-    public function index() {
+    public function login() {
 
         $data = Db::table('tb_user')->select();
 
         return json(['data'=>$data]);
+    }
+
+    public function registered() {
+        return json(['code'=>'200','message'=>'注册成功！']);
+    }
+
+    public function forgetPassword() {
+        return 'nihap';
     }
 }
 ?>

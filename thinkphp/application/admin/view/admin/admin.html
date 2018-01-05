@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统管理页面</title>
+    <link rel="stylesheet" type="text/css" href="__CSS_/bootstrap.min.css">
+</head>
+<body>
+
+    <table class="table table-striped table-bordered">
+        <tr>
+            <td>用户主键</td>
+            <td>用户名称</td>
+            <td>用户密码</td>
+            <td>用户邮箱</td>
+        </tr>
+        {volist name="message" id="userinfo"}
+            <tr>
+                <td>{$userinfo.userId}</td>
+                <td>{$userinfo.userName}</td>
+                <td>{$userinfo.userPassword}</td>
+                <td>{$userinfo.Email}</td>
+            </tr>
+        {/volist}
+    </table>
+</body>
+</html>
