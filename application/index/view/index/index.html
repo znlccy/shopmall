@@ -2,19 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>用户信息</title>
-    <mete name="" />
+    <title>电子商城</title>
+    <mete name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="keywords" content="shopmall 电子商城 电子 电商 网上超市"/>
+    <meta name="">
     <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" type="text/css"/>
-</head>
-<body class="table-response">
+    <link rel="stylesheet" href="../../../static/css/style.css" type="text/css"/>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
+        /* flexslider */
+        .flexslider{position:relative;height:400px;overflow:hidden;background:url("../../../static/images/loading.gif") 50% no-repeat;}
+        .slides{position:relative;z-index:1;}
+        .slides li{height:400px;}
+        .flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+        .flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+        .flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url("../../../static/images/dot.png") right 0 no-repeat;cursor:pointer;}
+        .flex-control-nav .flex-active{background-position:0 0;}
 
-    <div class="">
-        <a href="index.html" class="btn btn-info">登录</a>
-        <br>
+        .flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+        .flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+        .flex-direction-nav li a.flex-prev{left:40px;background:url("../../../static/images/prev.png") center center no-repeat;}
+        .flex-direction-nav li a.flex-next{right:40px;background:url("../../../static/images/next.png") center center no-repeat;}
+    </style>
+</head>
+
+<body class="table-response">
+    <!-- Navigation Begin -->
+    <div class="nav navbar-inverse navbar-fixed-top" id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img class="logo-custom" src="../../../static/images/logo.png">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#video">视频</a></li>
+                    <li><a href="#resouce">资料</a></li>
+                    <li><a href="#about-us">关于我们</a></li>
+                    <li><a href="#contact-us">联系我们</a></li>
+                    <li><a href="#search" class="btn-search"></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="table-response">
+    <!-- Navigation Begin -->
+
+    <!-- By the picture/second begin -->
+    <div class="jq22-container">
+
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background:url('../../../static/images/img1.png') 50% 0 no-repeat;"></li>
+                <li style="background:url('../../../static/images/img2.png') 50% 0 no-repeat;"></li>
+                <li style="background:url('../../../static/images/img3.png') 50% 0 no-repeat;"></li>
+                <li style="background:url('../../../static/images/img4.png') 50% 0 no-repeat;"></li>
+                <li style="background:url('../../../static/images/img5.png') 50% 0 no-repeat;"></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- By the picture/second end -->
+
+    <!-- Body Begin -->
+
+    <div class="table-response" style="margin-top: 80px">
         <table align="center" class="table table-striped table-bordered">
-            <caption>用户基本信息</caption>
+            <caption id="tcaption">用户基本信息</caption>
             <thead align="center">
             <tr>
                 <td>用户主键</td>
@@ -34,6 +95,42 @@
         </table>
     </div>
 
-    <script src="../../../js/bootstrapt.min.js"></script>
+    <div class="table-response" style="margin-top: 80px">
+        <table align="center" class="table table-striped table-bordered">
+            <caption id="tcaption">用户基本信息</caption>
+            <thead align="center">
+            <tr>
+                <td>用户主键</td>
+                <td>用户姓名</td>
+                <td>用户邮件</td>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="data" id="value"}
+            <tr align="center">
+                <td>{$value.userId}</td>
+                <td>{$value.userName}</td>
+                <td>{$value.Email}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+    <!-- Body End -->
+
+    <!-- Footer Begin -->
+    <div class="footer">
+        版权&nbsp;&copy;2017&nbsp;www.znlccy.com公司版权所有.<a target="_blank" href="www.znlccy.com"><img class="img-response" src=""></a>
+    </div>
+    <!-- Footer End -->
+
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="../../../static/js/jquery.js"></script>
+    <!-- jQuery flexslider 插件 主要用户轮播图片 -->
+    <script src="../../../static/js/jquery.flexslider-min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="../../../static/js/bootstrap.min.js"></script>
+    <!-- 引入自定义的js文件 -->
+    <script src="../../../static/js/custom.js"></script>
 </body>
 </html>
