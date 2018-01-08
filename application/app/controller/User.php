@@ -20,7 +20,7 @@ class User
     }
 
     public function registered() {
-        return json(['code'=>'200','message'=>'注册成功！']);
+        return json(['code'=>'200','message'=>'注册成功！','data']);
     }
 
     public function forgetPassword() {

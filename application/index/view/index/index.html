@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>用户信息</title>
+    <mete name="" />
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" type="text/css"/>
 </head>
-<body>
-    <table border="1" width="800px" align="center">
-        <tr align="center">
-            <td>用户主键</td>
-            <td>用户姓名</td>
-            <td>用户邮件</td>
-        </tr>
-        {volist name="data" id="value"}
+<body class="table-response">
+
+    <div class="">
+        <a href="index.html" class="btn btn-info">登录</a>
+        <br>
+    </div>
+    <div class="table-response">
+        <table align="center" class="table table-striped table-bordered">
+            <caption>用户基本信息</caption>
+            <thead align="center">
+            <tr>
+                <td>用户主键</td>
+                <td>用户姓名</td>
+                <td>用户邮件</td>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="data" id="value"}
             <tr align="center">
                 <td>{$value.userId}</td>
                 <td>{$value.userName}</td>
                 <td>{$value.Email}</td>
             </tr>
-        {/volist}
-    </table>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../../../js/bootstrapt.min.js"></script>
 </body>
 </html>
