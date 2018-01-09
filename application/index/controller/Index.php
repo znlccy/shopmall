@@ -15,6 +15,7 @@ class Index extends Controller
         $data = Db::table('tb_user')->select();
         /*var_dump($data);*/
 
+
         /*返回Json数据*/
         /*return json(['data'=>$data,'code'=>'200','message'=>'操作完成']);*/
 
