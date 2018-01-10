@@ -5,6 +5,7 @@ namespace app\index\controller;
 use think\Db;
 /*引入系统控制器类*/
 use think\Controller;
+use \think\Env;
 
 class Index extends Controller
 {
@@ -18,10 +19,17 @@ class Index extends Controller
 
         /*返回Json数据*/
         /*return json(['data'=>$data,'code'=>'200','message'=>'操作完成']);*/
+        /*dump(Env::get(name));*/
 
         /*分配数据给页面*/
         $this->assign('data',$data);
         /*加载页面*/
         return view();
     }
+
+    public function getRoute() {
+        return  '你好';
+    }
+
+
 }
