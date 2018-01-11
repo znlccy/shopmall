@@ -22,3 +22,4 @@ return [
 ];
 
 Route::rule('/','index/index/index');
+Route::rule('admin','admin/admin/admin');
