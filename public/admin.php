@@ -2,23 +2,20 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-use think\Route;
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
+// [ 应用入口文件 ]
 
-];
-
-Route::rule('/','index/index/index');
+// 定义应用目录
+define('APP_PATH', __DIR__ . '/../application/');
+//绑定模块
+/*define('BIND_MODULE','admin');*/
+// 加载框架引导文件
+require __DIR__ . '/../thinkphp/start.php';
+//关闭后台模块,必须在加载模块之后
+/*\think\App::route(false);*/

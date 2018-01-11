@@ -28,8 +28,13 @@ class Index extends Controller
     }
 
     public function getRoute() {
-        return  '你好';
+        dump(Env::get('database.url'));
+        dump(Env::get('database.username'));
+        dump(Env::get('database.password'));
+        dump(Env::get('database.driver'));
+        dump(config('app_debug'));
+        dump(config('app_status','没有值'));
+
     }
-
-
 }
+
