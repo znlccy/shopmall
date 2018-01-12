@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:javascript="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>三十一教育</title>
@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body class="table-response">
+<body class="table-response" data-spy="scroll" data-target="#myScrollSpy">
     <!-- Navigation Begin -->
     <div class="nav navbar-inverse navbar-fixed-top" id="menu">
         <div class="container">
@@ -51,7 +51,7 @@
                     <li><a href="#about-us">关于我们</a></li>
                     <li><a href="#contact-us">联系我们</a></li>
                     <li><a href="#login" style="margin-left: 30px">登录</a></li>
-                    <li><a href="#register" style="margin-left: 1px;">注册</a></li>
+                    <li><a href="#register" data-toggle="modal" data-target="#register" style="margin-left: 1px;">注册</a></li>
                 </ul>
             </div>
         </div>
@@ -85,7 +85,7 @@
             </div>
         </div>
     </div>-->
-    <div class="col-sm-2 col-md-2 alert alert-success alert-dissmissable">
+<!--    <div class="col-sm-2 col-md-2 alert alert-success alert-dissmissable">
         <button class="btn btn-sucess btn-sm">成功</button>
     </div>
     <div class="col-sm-4 col-md-4 alert alert-warning alert-dissmissable">
@@ -93,13 +93,144 @@
     </div>
     <div class="col-sm-4 col-md-6 alert alert-info alert-dissmissable">
         <button class="col-sm-6 col-md-6 btn btn-info btn-sm">信息</button>
-    </div>
+    </div>-->
 
-    <div class="progress col-sm-6 col-md-6" align="center">
+    <!--<div class="progress progress-striped col-sm-offset-1 col-md-offset-1 active" align="center" style="margin-top: 10px">
         <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
             <span class="sr-only">40%</span>
         </div>
+        <div class="progress-bar progress-bar-danger active">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuenow="10" aria-valuemax="100" style="width: 30%">
+                <span class="sr-only">30%</span>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="container" style="margin-top: 15px">
+        <div class="row">
+            <div class="col-sm-2 col-md-2 clo-lg-2">
+                <ul class="list-group ">
+                    <li class="list-group-item active"><img class="img-circle" src="../../../static/images/">免费注册域名</li>
+                    <li class="list-group-item">Java项目应用</li>
+                    <li class="list-group-item">
+                        <span class="badge">新<font color="red">23</font></span>
+                        PHP项目开发
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">新<font color="red">3</font></span>
+                        C#项目开发
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <ul class="list-group">
+                    <li class="list-group-item active">免费注册域名</li>
+                    <li class="list-group-item">Java Web应用</li>
+                    <li class="list-group-item">
+                        <span class="badge" style="padding-top: 6px;">新<font color="red">23</font></span>
+                        PHP项目开发
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">新<font color="red">3</font></span>
+                        C#项目开发
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                标题
+            </div>
+            <div class="panel-body">
+                这是一个基本的面本
+                <a class="alert-link" href="#">Hello</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--<button class="btn btn-primary" data-toggle="modal" data-target="#register">创建模态框</button>-->
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h5 class="modal-title"><strong>注册界面</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <!--<div class="panle">
+                            <div class="panel-heading">
+                                注册界面
+                            </div>
+                            <div class="panel-body">
+                                创建面板主题
+                            </div>
+                            &lt;!&ndash;<div class="panel-footer">
+                                创建面板脚注
+                            </div>&ndash;&gt;
+                        </div>-->
+                        <div class="container">
+                            <!--<div class="row">-->
+                                <form role="form" class="bs-example bs-example-form form-vertical">
+                                    <div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                        <label for="name" class="control-label input-group-addon"><font>用&nbsp;&nbsp;户&nbsp;&nbsp;名</font></label>
+                                        <input type="text" class="form-control" id="name" placeholder="请输入用户名">
+                                        <label for="name" class="control-label input-group-addon"><font class="glyphicon glyphicon-user"></font></label>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                        <label for="password" class="control-label input-group-addon"><font>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</font></label>
+                                        <input type="password" class="form-control" id="password" placeholder="请输入用户密码">
+                                        <label for="password" class="control-label input-group-addon"><font class="glyphicon glyphicon-lock"></font></label>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                        <label for="password" class="control-label input-group-addon"><font>确认密码</font></label>
+                                        <input type="password" class="form-control" id="password" placeholder="请输入用户确认密码">
+                                        <label for="password" class="control-label input-group-addon"><font class="glyphicon glyphicon-lock"></font></label>
+                                    </div>
+                                </form>
+                            <!--</div>-->
+                        </div>
+
+                    </div>
+                    <div class="modal-footer" align="center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('myModal').modal.hide();
+        });
+    </script>
+    <script>
+        $(function () {
+            $('myModal').on('hide.bs.modal',function () {
+                alert('嘿嘿，听说你喜欢模态框');
+            });
+        });
+
+    </script>
+
+    <!--<div class="container">
+        <div class="drop
+">
+            <a data-toggle="dropdown" href="#">下拉菜单
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li class="menu-item">Java 开发</li>
+                <li class="menu-item">PHP 开发</li>
+                <li class="menu-item">Android 开发</li>
+            </ul>
+        </div>
+    </div>-->
+
 
     <!-- Body Begin -->
     <div class="container table-response" style="margin-top: 40px">
@@ -147,6 +278,77 @@
     </div>
     <!-- Body End -->
 
+    <div class="container" style="margin-bottom: 10px;">
+        <div id="myCarousel" class="carousel slide">
+            <!--轮播(carousel)指标-->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!--轮播(Carousel)项目-->
+            <div class="carousel-inner">
+                <div class="item active" align="center">
+                    <img src="../../../static/images/slide1.png" title="轮播图片1">
+                </div>
+                <div class="item" align="center">
+                    <img src="../../../static/images/slide2.png" title="轮播图片2">
+                </div>
+                <div class="item" align="center">
+                    <img src="../../../static/images/slide3.png" title="轮播图片3">
+                </div>
+            </div>
+            <!--轮播(Carousel)导航-->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev"><font size="16px" color="#dc143c">&lsaquo;</font></a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next"><font size="16px" color="#dc143c">&rsaquo;</font></a>
+        </div>
+    </div>
+
+    <!--<div class="container" style="margin-bottom: 5px" >
+
+        <button type="button" class="btn btn-default" title="Popovre" data-container="body" data-toggle="popover" data-placement="left" data-content="左侧提示">
+            左侧的Popover
+        </button>
+        <button type="button" class="btn btn-primary" title="Popover title"
+                data-container="body" data-toggle="popover" data-placement="top"
+                data-content="顶部的 Popover 中的一些内容">
+            顶部的 Popover
+        </button>
+
+    </div>-->
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration: none">
+                            点击我进行折叠
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        折叠显示的部分内容，请注意查收
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="text-decoration: none;">
+                            点击进行折叠内容部分
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo" class="pabel-collapse collapse in">
+                    <div class="penel-body">
+                        下面进图魔化时刻，见证奇迹的时刻到了
+                        下面进图魔化时刻，见证奇迹的时刻到了
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer Begin -->
     <div class="footer">
         版权&nbsp;&copy;2017&nbsp;www.znlccy.com公司版权所有.<a target="_blank" href="www.znlccy.com"><img class="img-response" src=""></a>
