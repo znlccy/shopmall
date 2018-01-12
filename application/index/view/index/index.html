@@ -50,7 +50,7 @@
                     <li><a href="#teacher">教学</a></li>
                     <li><a href="#about-us">关于我们</a></li>
                     <li><a href="#contact-us">联系我们</a></li>
-                    <li><a href="#login" style="margin-left: 30px">登录</a></li>
+                    <li><a href="#login" data-toggle="modal" data-target="#login" style="margin-left: 30px">登录</a></li>
                     <li><a href="#register" data-toggle="modal" data-target="#register" style="margin-left: 1px;">注册</a></li>
                 </ul>
             </div>
@@ -203,19 +203,71 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <!--<button class="btn btn-primary" data-toggle="modal" data-target="#register">创建模态框</button>-->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h5 class="modal-title"><strong>登录界面</strong></h5>
+                    </div>
+                    <div class="modal-body">
+                        <!--<div class="panle">
+                            <div class="panel-heading">
+                                注册界面
+                            </div>
+                            <div class="panel-body">
+                                创建面板主题
+                            </div>
+                            &lt;!&ndash;<div class="panel-footer">
+                                创建面板脚注
+                            </div>&ndash;&gt;
+                        </div>-->
+                        <div class="container">
+                            <!--<div class="row">-->
+                            <form role="form" class="bs-example bs-example-form form-vertical">
+                                <div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                    <label for="name" class="control-label input-group-addon"><font>用&nbsp;&nbsp;户&nbsp;&nbsp;名</font></label>
+                                    <input type="text" class="form-control" id="name" placeholder="请输入用户名">
+                                    <label for="name" class="control-label input-group-addon"><font class="glyphicon glyphicon-user"></font></label>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                    <label for="password" class="control-label input-group-addon"><font>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</font></label>
+                                    <input type="password" class="form-control" id="password" placeholder="请输入用户密码">
+                                    <label for="password" class="control-label input-group-addon"><font class="glyphicon glyphicon-lock"></font></label>
+                                </div>
+                                <!--<div class="col-sm-3 col-md-3 col-lg-3 form-group input-group" style="margin-left: 130px">
+                                    <label for="password" class="control-label input-group-addon"><font>确认密码</font></label>
+                                    <input type="password" class="form-control" id="password" placeholder="请输入用户确认密码">
+                                    <label for="password" class="control-label input-group-addon"><font class="glyphicon glyphicon-lock"></font></label>
+                                </div>-->
+                            </form>
+                            <!--</div>-->
+                        </div>
+
+                    </div>
+                    <div class="modal-footer" align="center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $(function () {
             $('myModal').modal.hide();
         });
     </script>
-    <script>
+    <!--<script>
         $(function () {
             $('myModal').on('hide.bs.modal',function () {
                 alert('嘿嘿，听说你喜欢模态框');
             });
         });
-
-    </script>
+    </script>-->
 
     <!--<div class="container">
         <div class="drop
